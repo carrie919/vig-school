@@ -3,7 +3,7 @@
 import * as React from "react";
 import Image from "next/image";
 import branch_01 from "@/assets/branches/branch_01.jpg";
-import branch_00 from "@/assets/branches/branch_00.jpg";
+import branch_02 from "@/assets/branches/branch_02.jpg";
 
 export default function LittleRockIndianSchool() {
   return (
@@ -18,7 +18,7 @@ export default function LittleRockIndianSchool() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <Image
-              src={branch_00}
+              src={branch_02}
               alt="Little Rock Indian School Campus"
               className="rounded-lg"
             />
