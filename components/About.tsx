@@ -1,7 +1,3 @@
-import branch_01 from "@/assets/branches/branch_01.jpg";
-import branch_00 from "@/assets/branches/branch_00.jpg";
-
-
 export default function About() {
   return (
     <section id="about" className="py-20 bg-white">
