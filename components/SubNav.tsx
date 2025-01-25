@@ -1,18 +1,27 @@
+"use client";
+
 import Image from "next/image";
 import navBook from "../assets/nav-icons/nav-book.png";
 import navBoard from "../assets/nav-icons/nav-board.png";
 import navHat from "../assets/nav-icons/nav-hat.png";
-import navHatBlue from "../assets/nav-icons/nav-hat-blue.png";
+// import navHatBlue from "../assets/nav-icons/nav-hat-blue.png";
 // import navPresentation from "../assets/nav-icons/nav-presentation.png";
 import navSetting from "../assets/nav-icons/nav-settings.png";
 import navThought from "../assets/nav-icons/nav-thought.png";
+import { useEffect, useState } from "react";
 
 export default function SubNav() {
-  const env = process.env.NODE_ENV;
-  const hostName =
-    env === "development"
-      ? "http://localhost:3000"
-      : `https:${window.location.hostname}`;
+  const [hostName, setHostName] = useState("");
+
+  useEffect(() => {
+    const env = process.env.NODE_ENV;
+    const computedHostName =
+      env === "development"
+        ? "http://localhost:3000"
+        : `https://${window.location.hostname}`;
+    setHostName(computedHostName);
+  }, []);
+
   return (
     <section
       className="w-full hidden sm:flex my-8 mt-12"
@@ -122,39 +131,6 @@ export default function SubNav() {
             </figure>
           </div>
         </div>
-        {/* <div className="w-1/7">
-          <div className="text-center text-xs lg:text-base font-inherit">
-            <figure className="wp-caption">
-              <a
-                href="https://littlerock.edu.in/special-features/"
-                target="_blank"
-                rel="nofollow"
-              >
-                <Image
-                  src={navHatBlue.src}
-                  title="diploma"
-                  alt="diploma"
-                  width={48}
-                  height={48}
-                  className="inline-block align-middle w-12 mb-2"
-                />
-              </a>
-              <figcaption className="widget-image-caption wp-caption-text mt-2 text-red-700 font-bold">
-                Special Features
-              </figcaption>
-            </figure>
-          </div>
-        </div> */}
-        {/* <div className="w-1/7">
-          <div className="text-center text-xs lg:text-base font-inherit">
-            <figure className="wp-caption">
-              <a href="https://littlerock.edu.in/recent-acheivements/">
-                <Image src={navPresentation.src} title="presentation" alt="presentation" width={48} height={48} className="inline-block align-middle w-12 mb-2" />
-              </a>
-              <figcaption className="widget-image-caption wp-caption-text mt-2 text-red-700 font-bold">Achievements</figcaption>
-            </figure>
-          </div>
-        </div> */}
       </div>
     </section>
   );
