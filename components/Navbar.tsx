@@ -130,46 +130,24 @@ export default function MainNav() {
                 </Link>
               </li>
               <li>
-                <details>
-                  <summary style={{ fontSize: "16px" }}>Facilities</summary>
-                  <ul className="pl-4">
-                    {facilities.map((item) => (
-                      <li key={item.title}>
-                        <Link href={item.href} passHref legacyBehavior>
-                          <a onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: "16px" }}>{item.title}</a>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </details>
+                <Link href="/facilities" passHref legacyBehavior>
+                  <a onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: "16px" }}>Facilities</a>
+                </Link>
               </li>
               <li>
-                <details>
-                  <summary style={{ fontSize: "16px" }}>Admissions</summary>
-                  <ul className="pl-4">
-                    {admissions.map((item) => (
-                      <li key={item.title}>
-                        <Link href={item.href} passHref legacyBehavior>
-                          <a onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: "16px" }}>{item.title}</a>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </details>
+                <Link href="/admissions" passHref legacyBehavior>
+                  <a onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: "16px" }}>Admissions</a>
+                </Link>
               </li>
               <li>
-                <details>
-                  <summary style={{ fontSize: "16px" }}>Circulars</summary>
-                  <ul className="pl-4">
-                    {circulars.map((item) => (
-                      <li key={item.title}>
-                        <Link href={item.href} passHref legacyBehavior>
-                          <a onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: "16px" }}>{item.title}</a>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </details>
+                <Link href="/circulars" passHref legacyBehavior>
+                  <a onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: "16px" }}>Circulars</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/alumni" passHref legacyBehavior>
+                  <a onClick={() => setIsMobileMenuOpen(false)} style={{ fontSize: "16px" }}>Alumni</a>
+                </Link>
               </li>
               <li>
                 <Link href="/contact" passHref legacyBehavior>
@@ -214,22 +192,4 @@ const ListItem = React.forwardRef<
 
 ListItem.displayName = "ListItem";
 
-
-{
-  /* <NavigationMenuItem className="relative">
-              <NavigationMenuTrigger className="hover:text-yellow-300">
-                <span style={{ fontSize: "16px" }}>Facilities</span>
-              </NavigationMenuTrigger>
-              <NavigationMenuContent className="absolute left-0 top-6 mt-2 w-[500px] bg-red-800 text-white shadow-lg rounded-md py-1 z-50">
-                <ul className="p-2">
-                  {facilities.map((item) => (
-                    <ListItem
-                      key={item.title}
-                      title={item.title}
-                      href={item.href}
-                    />
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem> */
-}
+// ...existing code...
