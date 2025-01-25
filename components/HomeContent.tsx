@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import c_01 from "@/assets/ch/ch_01.jpg";
 
 const HomeContent: React.FC = () => {
   return (
@@ -24,10 +25,9 @@ const HomeContent: React.FC = () => {
         {/* Left side - Image */}
         <div className="lg:w-2/3">
           <Image
-            src={"https://picsum.photos/id/114/4000/2670"}
-            alt="Slide"
-            width={4000}
-            height={2670}
+            src={c_01}
+            alt={"Vignan School"}
+            className="object-cover"
           />
         </div>
 

@@ -5,13 +5,6 @@ import * as React from "react";
 import { Montserrat } from "next/font/google";
 
 import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import About from "@/components/About";
-import Features from "@/components/Features";
-import Gallery from "@/components/Gallery";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import SubNav from "@/components/SubNav";
 import HomeContent from "@/components/HomeContent";
 

@@ -19,7 +19,7 @@ const Header = () => {
             />
           <div className="ml-4">
             <h1 className="text-xl font-medium text-red-800">Vignan High School</h1>
-            <p className="text-xs text-gray-500">Affiliated to Central Board of secondary education</p>
+            {/* <p className="text-xs text-gray-500">Affiliated to Central Board of secondary education</p> */}
             <p className="text-xs text-gray-500">Jaggayyapet</p>
           </div>
         </div>
