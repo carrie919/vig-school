@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vignan High School",
     description: "Welcome to Vignan High School. Providing quality education since 1990.",
-    url: "https://www.vignanhighschool.com",
+    url: "https://www.vignanschool.in",
     siteName: "Vignan High School",
     images: [
       {
