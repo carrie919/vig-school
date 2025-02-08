@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Vignan High School",
     images: [
       {
-        url: "https://www.vignanhighschool.com/branch_02.jpg",
+        url: "https://vignanschool.in/branch_02.jpg",
         width: 800,
         height: 600,
         alt: "Vignan High School",
