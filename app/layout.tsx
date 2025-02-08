@@ -27,20 +27,9 @@ export const metadata: Metadata = {
         alt: "Vignan High School",
       },
     ],
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@vignanhighschool",
-    title: "Vignan High School",
-    description: "Welcome to Vignan High School. Providing quality education since 1990.",
-    image: "https://www.vignanhighschool.com/twitter-image.jpg",
-  },
-  geo: {
-    position: "16.900756° N;80.099477° E",
-    placename: "Jaggaiahpet, Andhra Pradesh",
-  },
+  }
 };
 
 const montserrat = Montserrat({
