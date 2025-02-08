@@ -1,9 +1,12 @@
-"use client";
-
 import * as React from "react";
 import Image from "next/image";
+import { Metadata } from "next";
 import branch_01 from "@/assets/branches/branch_01.jpg";
 import branch_02 from "@/assets/branches/branch_02.jpg";
+
+export const metadata: Metadata = {
+  title: "About Us",
+};
 
 export default function LittleRockIndianSchool() {
   return (
