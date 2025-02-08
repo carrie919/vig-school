@@ -45,8 +45,8 @@ export default function Alumni() {
     },
   });
 
-  const classes = ["Class 1", "Class 2", "Class 3", "Class 4", "Class 5"];
-  const years = ["2020", "2019", "2018", "2017", "2016"];
+  const classes = ["Class 1", "Class 2", "Class 3", "Class 4", "Class 5", "Class 6", "Class 7", "Class 8", "Class 9", "Class 10"];
+  const years = Array.from({ length: 25 }, (_, i) => (2000 + i).toString());
 
   return (
     <section id="alumni" className="py-20 bg-white">

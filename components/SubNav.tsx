@@ -5,9 +5,10 @@ import navBook from "../assets/nav-icons/nav-book.png";
 import navBoard from "../assets/nav-icons/nav-board.png";
 import navHat from "../assets/nav-icons/nav-hat.png";
 // import navHatBlue from "../assets/nav-icons/nav-hat-blue.png";
-// import navPresentation from "../assets/nav-icons/nav-presentation.png";
-import navSetting from "../assets/nav-icons/nav-settings.png";
+import navPresentation from "../assets/nav-icons/nav-presentation.png";
+// import navSetting from "../assets/nav-icons/nav-settings.png";
 import navThought from "../assets/nav-icons/nav-thought.png";
+
 import { useEffect, useState } from "react";
 
 export default function SubNav() {
@@ -115,9 +116,9 @@ export default function SubNav() {
         <div className="w-1/7">
           <div className="text-center text-xs lg:text-base font-inherit">
             <figure className="wp-caption">
-              <a href={`${hostName}/warning-against-fraud/`}>
+              <a href={`${hostName}/admissions/`}>
                 <Image
-                  src={navSetting.src}
+                  src={navPresentation.src}
                   title="gears"
                   alt="gears"
                   width={48}
@@ -126,7 +127,7 @@ export default function SubNav() {
                 />
               </a>
               <figcaption className="widget-image-caption wp-caption-text mt-2 text-red-700 font-bold">
-                Warning Against Fraud
+                Admissions
               </figcaption>
             </figure>
           </div>
