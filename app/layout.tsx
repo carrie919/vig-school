@@ -30,6 +30,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    site: "@vignanhighschool",
+    title: "Vignan High School",
+    description: "Welcome to Vignan High School. Providing quality education since 1990.",
+    image: "https://www.vignanhighschool.com/twitter-image.jpg",
+  },
   geo: {
     position: "16.900756° N;80.099477° E",
     placename: "Jaggaiahpet, Andhra Pradesh",
@@ -56,6 +63,12 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#ffffff" />
+        <meta property="og:title" content="Vignan High School" />
+        <meta property="og:description" content="Welcome to Vignan High School. Providing quality education since 1990." />
+        <meta property="og:url" content="https://www.vignanhighschool.com" />
+        <meta name="geo.position" content="16.900756° N;80.099477° E" />
+        <meta name="geo.placename" content="Jaggaiahpet, Andhra Pradesh" />
+        <meta name="geo.region" content="IN" />
       </Head>
       <body className={inter.className}>
         <Header />
