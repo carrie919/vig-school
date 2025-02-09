@@ -11,7 +11,7 @@ function findPhoneColumnIndex(headerRow: string[]): number {
 export async function postAlumni(data: any) {  // Use POST for form submission
   try {
     const auth = new google.auth.GoogleAuth({
-      keyFile: path.join(process.cwd(), 'service-account.json'),
+      keyFile: path.join(process.cwd(), 'service-key.json'),
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
 
