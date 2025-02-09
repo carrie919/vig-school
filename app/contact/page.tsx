@@ -14,7 +14,7 @@ export default function ContactUs() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Get in Touch
             </h3>
@@ -36,7 +36,7 @@ export default function ContactUs() {
               Monday to Friday: 09.30 a.m. to 04.30 p.m.<br />
               Saturday: 09.30 a.m. to 12.30 p.m.
             </p>
-          </div>
+          </div> */}
 
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -45,15 +45,15 @@ export default function ContactUs() {
             <p className="text-gray-600 leading-relaxed">
               Come visit our campus to learn more about our facilities and programs.
             </p>
-            <p className="text-gray-600 leading-relaxed mt-4">
+            {/* <p className="text-gray-600 leading-relaxed mt-4">
               <strong>Address:</strong><br />
               VIGNAN HIGH SCHOOL<br />
               Priority Highlands Post Box No. 7<br />
               Brahmavar 576 213, Udupi District<br />
               Karnataka State, India
-            </p>
+            </p> */}
             <p className="text-gray-600 leading-relaxed mt-4">
-              <strong>Additional Address:</strong><br />
+              <strong>Address:</strong><br />
               6-1126, opp. market yard, vignan nagar,<br />
               Jaggaiahpet, Andhra Pradesh 521175<br />
               <strong>Phone:</strong> 08654223177

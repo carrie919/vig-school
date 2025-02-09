@@ -2,10 +2,9 @@
 import * as React from "react";
 import { useState } from "react";
 import Image from "next/image";
-import { db } from "@/lib/firebase";
-import { collection, addDoc } from "firebase/firestore";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { postAlumni } from "@/lib/actions";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Required"),
@@ -37,8 +36,15 @@ export default function Alumni() {
     validationSchema: validationSchema,
     onSubmit: async (values) => {
       try {
-        await addDoc(collection(db, "alumni"), values);
-        setIsModalOpen(true);
+        const result = await postAlumni({
+          ...values,
+          date: new Date().toLocaleString()
+        });
+        if (result.status === "SUCCESS") {
+          setIsModalOpen(true);
+        } else {
+          alert(result.message);
+        }
       } catch (error) {
         console.error("Error adding document: ", error);
       }
@@ -61,69 +67,39 @@ export default function Alumni() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Letter to Old Students
+              Letter to Alumni
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Dear student,
+              Dear Alumni,
               <br />
               <br />
-              Greetings from your alma-mater, Little Rock.
+              Greetings from Vignan School.
               <br />
               <br />
-              I am sure you would like to be in touch with your School, on a
-              regular basis. Let me make a few suggestions in this connection:
+              We hope this message finds you well. We would like to stay connected with you and keep you updated on the latest happenings at Vignan School. Here are a few suggestions to maintain our connection:
               <br />
               <br />
-              a) Visit the Campus: You are always welcome to the campus. Please
-              find time to visit us whenever you come home to visit your parents
-              and dear ones.
+              a) Visit the Campus: You are always welcome to visit the campus. Please find time to visit us whenever you are in town.
               <br />
               <br />
-              b) Start Alumni Chapters: Let me also suggest that in cities with
-              a concentration of our old students, we start Alumni Chapters.
-              Recently when we visited Dubai, a few old students met us and they
-              have assured us that they would initiate the process of gathering
-              and organizing old students living in Dubai and in other Gulf
-              countries and set up an Alumni Chapter there. Similarly students
-              from Bengaluru have promised us that they would also do the same.
-              I request those living in such places to take this initiative. It
-              would be great if you could do this. It’s good to keep alive our
-              contacts and also your mutual contacts. Many reputed schools have
-              similar Alumni Chapters. Let’s do the same.
+              b) Start Alumni Chapters: We encourage you to start Alumni Chapters in cities with a significant number of our alumni. This will help in keeping the Vignan spirit alive and foster mutual connections.
               <br />
               <br />
-              c) Alumni Reunion: We may consider having an Alumni Reunion next
-              year when we complete 40 years and celebrate our Ruby Anniversary.
-              We shall give sufficient advance notice about this, to facilitate
-              maximum attendance.
+              c) Alumni Reunion: We are considering organizing an Alumni Reunion to celebrate our milestones. We will provide sufficient advance notice to ensure maximum participation.
               <br />
               <br />
-              d) Alumni Registration: We have a provision to register our
-              students in our website. Please open the link and complete the
-              form given there. This will help us communicate with you whenever
-              needed.
+              d) Alumni Registration: Please register on our website to help us communicate with you effectively. Your registration will ensure that you receive all important updates and invitations.
               <br />
               <br />
-              e) Alumni Achievers: We would like to carry a feature on our old
-              students who are great achievers, in our Year Book year after
-              year. To make this possible, old students can write to us about
-              any of their batch mates who they think deserve to be classified
-              as great achievers. We need details of such old students, with all
-              relevant evidence of their achievements and their photographs. We
-              need this information before end of February every year. Details
-              of those selected by the Editorial Board will be published in the
-              Yearbook to be published in May.
+              e) Alumni Achievers: We would like to feature our distinguished alumni in our Year Book. If you know any alumni who have achieved great success, please share their details with us. We need relevant evidence of their achievements and their photographs.
               <br />
               <br />
               Best wishes,
               <br />
               <br />
-              (Mathew C Ninan)
+              Principal
               <br />
-              Director
-              <br />
-              <br />
-              February 05, 2020
+              Vignan School
             </p>
           </div>
 
@@ -134,6 +110,7 @@ export default function Alumni() {
             <form
               onSubmit={formik.handleSubmit}
               className="text-gray-600 leading-relaxed"
+              id="alumni-form"
             >
               <label className="block mb-2">
                 Your Name
@@ -267,7 +244,10 @@ export default function Alumni() {
             </div>
             <div className="mt-4 flex justify-end">
             <button
-              onClick={() => setIsModalOpen(false)}
+              onClick={() => {
+                setIsModalOpen(false);
+                formik.resetForm();
+              }}
               className="mt-4 px-4 py-2 bg-blue-600 text-white rounded"
             >
               Close

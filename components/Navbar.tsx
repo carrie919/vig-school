@@ -101,7 +101,7 @@ export default function MainNav() {
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white"
+            className="text-white mr-2"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -111,12 +111,12 @@ export default function MainNav() {
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
           <div className="bg-red-800 text-white p-4">
             <div className="flex justify-end">
-              <button
+                <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-white"
-              >
+                className="text-white mr-2"
+                >
                 <X size={24} />
-              </button>
+                </button>
             </div>
             <ul className="space-y-2">
               <li>

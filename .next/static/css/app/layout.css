@@ -853,6 +853,9 @@ video {
 .h-px {
   height: 1px;
 }
+.h-screen {
+  height: 100vh;
+}
 .max-h-96 {
   max-height: 24rem;
 }
@@ -1295,6 +1298,10 @@ video {
 .bg-foreground {
   background-color: hsl(var(--foreground));
 }
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+}
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
@@ -1441,6 +1448,9 @@ video {
 .pb-4 {
   padding-bottom: 1rem;
 }
+.pl-2 {
+  padding-left: 0.5rem;
+}
 .pl-2\.5 {
   padding-left: 0.625rem;
 }
@@ -1494,6 +1504,10 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 .text-\[0\.8rem\] {
   font-size: 0.8rem;

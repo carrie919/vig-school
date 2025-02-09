@@ -24,9 +24,9 @@ export default function Footer() {
               <h2 className="text-3xl font-bold mb-4">
                 Vignan High School
               </h2>
-              <p>Priority Highlands</p>
-              <p>Post Box No. 7,</p>
-              <p>Brahmavar 576 213, Udupi</p>
+              <p>6-1126, opp. market yard</p>
+              <p>Vignan Nagar,</p>
+              <p>Jaggaiahpet, Andhra Pradesh 521175</p>
               <p className="mt-2">Office Hours: 9:30 a.m. - 4:30 p.m</p>
             </div>
 
@@ -34,14 +34,13 @@ export default function Footer() {
             <div>
               <h3 className="text-2xl font-bold mb-4">For Admissions</h3>
               <p>
-                <span className="font-semibold">Phone:</span> 0820-2562400,
-                2561199
+                <span className="font-semibold">Phone:</span> 086542 23177
               </p>
               <p>
                 <span className="font-semibold">Mail:</span>{" "}
-                principal@littlerock.edu.in
+                admissions@vignanschool.edu
               </p>
-              <p>director@littlerock.edu.in</p>
+              <p>info@vignanschool.edu</p>
             </div>
 
             {/* Social Media Links */}
